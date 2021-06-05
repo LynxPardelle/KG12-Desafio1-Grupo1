@@ -1,0 +1,538 @@
+@charset "UTF-8";
+/*
+  Guía de Estilos:
+
+  1. Variables
+  2. General
+  3. Header
+  4. Section 1
+  5. Section 2
+  6. Section 3
+  7. Section 4
+  8. Footer
+  9. Responsive
+*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap");
+/*--------------------> 1. Variables <--------------------*/
+/*--------------------> 2. General <--------------------*/
+html {
+  overflow-x: hidden;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  font-family: "Poppins", sans-serif;
+  font-size: 18px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background-color: #dfdfdf;
+}
+
+li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: #bfbfbf;
+}
+
+button {
+  border: none;
+  padding: 1em 3em;
+  font-weight: bold;
+}
+
+.btn-pill-green {
+  background-color: #2acfcf;
+  color: white;
+}
+
+/*--------------------> 3. Header <--------------------*/
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 4em;
+  padding: 1.5em;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background-color: white;
+}
+
+header h1 {
+  font-size: 1.5em;
+}
+
+header #navbar-desktop {
+  display: none;
+}
+
+header #nav-cellphone {
+  z-index: 10;
+}
+
+header #nav-cellphone #menu-btn {
+  width: 2.5em;
+  height: 2.5em;
+  z-index: 10 !important;
+  opacity: 0.01;
+}
+
+header #nav-cellphone #menu-btn:not(:checked) ~ div {
+  display: none;
+}
+
+header #nav-cellphone #menu-btn:checked ~ div {
+  display: block;
+}
+
+header #nav-cellphone #menu-icon {
+  display: block;
+  position: absolute;
+  top: 0.5em;
+  right: 1em;
+  z-index: -1;
+  width: 2.5em;
+  height: 2.5em;
+}
+
+header #nav-cellphone #menu-icon span {
+  width: 100%;
+  height: 50%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  text-align: center;
+  font-size: 50px;
+}
+
+header #nav-cellphone #menu-icon span:first-of-type {
+  top: -25px;
+}
+
+header #nav-cellphone #menu-icon span:nth-of-type(2) {
+  top: -12.5px;
+}
+
+header #nav-cellphone #menu-btn:checked + #menu-icon span:first-of-type {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  top: -10px;
+  left: -5px;
+}
+
+header #nav-cellphone #menu-btn:checked + #menu-icon span:nth-of-type(2) {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  top: 0px;
+  left: -5px;
+}
+
+header #nav-cellphone #menu-btn:checked + #menu-icon span:nth-of-type(3) {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  top: 0px;
+  left: 5px;
+}
+
+header #nav-cellphone #menu-btn:checked + #menu-icon span:last-of-type {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  top: -10px;
+  left: 5px;
+}
+
+header #nav-cellphone div {
+  position: absolute;
+  width: 75%;
+  top: 75px;
+  left: calc(50vw - 37.5%);
+  background-color: #3b3054;
+  color: white;
+  text-align: center;
+  border-radius: 15px;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
+  padding: 2em;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+header #nav-cellphone div nav ul {
+  padding: 0;
+}
+
+header #nav-cellphone div nav ul li {
+  margin: 1.5em auto;
+  list-style-type: none;
+}
+
+header #nav-cellphone div nav ul hr {
+  display: block;
+  width: 90%;
+  margin: 0 auto;
+  background: #9e9aa7;
+}
+
+header #nav-cellphone div .btn-pill-green {
+  width: 80%;
+  border-radius: 50px;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  -ms-border-radius: 50px;
+  -o-border-radius: 50px;
+}
+
+/*--------------------> 4. Section 1 <--------------------*/
+#section_1 {
+  background-color: white;
+}
+
+#section_1 h2 {
+  font-size: 2.5em;
+  font-weight: bold;
+  line-height: 1em;
+}
+
+#section_1 img {
+  width: 150vw;
+}
+
+#section_1 .btn-pill-green {
+  border-radius: 50px;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  -ms-border-radius: 50px;
+  -o-border-radius: 50px;
+}
+
+#section_1 .container-s1 {
+  padding: 1em;
+  text-align: center;
+  margin: 0;
+}
+
+#section_1 .p-s1 {
+  color: #9e9aa7;
+}
+
+/*--------------------> 5. Section 2 <--------------------*/
+#section_2 div {
+  background-color: #3b3054;
+  background-image: url("/images/bg-shorten-mobile.svg");
+  background-size: 66%;
+  background-repeat: no-repeat;
+  background-position: right top;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: block;
+  padding: 1em;
+  width: 80%;
+  margin: 2em auto;
+  position: relative;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+
+#section_2 div input {
+  display: block;
+  margin: 0 auto;
+  padding: 1em;
+  width: 90%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+
+#section_2 div .btn-pill-green {
+  display: block;
+  margin: 0.5em auto 0;
+  width: 90%;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+
+/*--------------------> 6. Section 3 <--------------------*/
+#section_3 .text-s3 {
+  padding: 0.5em;
+  text-align: center;
+  margin: 0;
+}
+
+#section_3 .p-s3 {
+  margin: 0;
+  padding: 1.5em;
+  text-align: center;
+  color: #9e9aa7;
+}
+
+#section_3 div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  position: relative;
+}
+
+#section_3 div #anoying-line {
+  position: absolute;
+  width: 10px;
+  height: 500px;
+  background-color: #2acfcf;
+  top: calc(50% - 250px);
+  left: calc(50% - 5px);
+}
+
+#section_3 div .container-s3 {
+  display: block;
+  background-color: white;
+  width: 90%;
+  margin: 2em auto;
+}
+
+#section_3 div .container-s3 div {
+  background-color: #3b3054;
+  border-radius: 100%;
+  width: 45px;
+  margin: calc(-22.5px - 0.75em) auto 0;
+  padding: 1.5em;
+}
+
+#section_3 div .container-s3 div img {
+  width: 45px;
+}
+
+/*--------------------> 7. Section 4 <--------------------*/
+#section_4 {
+  background-color: #3b3054;
+  background-image: url("/images/bg-boost-mobile.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: right top;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 5em 0;
+}
+
+#section_4 img {
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+}
+
+#section_4 h2 {
+  color: white;
+  text-align: center;
+}
+
+#section_4 .btn-pill-green {
+  display: block;
+  margin: 0.5em auto 0;
+  border-radius: 50px;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  -ms-border-radius: 50px;
+  -o-border-radius: 50px;
+}
+
+/*--------------------> 8. Footer <--------------------*/
+footer {
+  background-color: #232127;
+  padding: 2em;
+  text-align: center;
+  display: block;
+}
+
+footer h2 {
+  font-size: 2em;
+  margin: 0;
+}
+
+footer h2,
+footer h3 {
+  color: white;
+}
+
+footer .container_foot {
+  padding: 1em;
+}
+
+footer .container_foot nav ul {
+  padding: 0;
+}
+
+footer #icons_footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  padding: 1em;
+}
+
+/*--------------------> 9. Responsive <--------------------*/
+@media screen and (min-width: 900px) {
+  /*--------------------> 3. Header <--------------------*/
+  header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    height: 6em;
+  }
+  header h1 {
+    font-size: 2em;
+  }
+  header #navbar-desktop {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -ms-flex-line-pack: center;
+        align-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 85%;
+  }
+  header #navbar-desktop nav ul li {
+    display: inline;
+    margin: 0 1em;
+  }
+  header #navbar-desktop div button:first-of-type {
+    background-color: white;
+    color: #bfbfbf;
+    font-size: 1em;
+  }
+  header #navbar-desktop div .btn-pill-green {
+    border-radius: 50px;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    -ms-border-radius: 50px;
+    -o-border-radius: 50px;
+  }
+  header #nav-cellphone {
+    display: none;
+  }
+  /*--------------------> 4. Section 1 <--------------------*/
+  #section_1 {
+    background-color: white;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  #section_1 h2 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    font-size: 4em;
+    font-weight: bold;
+    text-align: left;
+    margin: 0.2em auto 1.1em;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+  #section_1 img {
+    width: 50%;
+    height: 32.625%;
+  }
+  #section_1 .btn-pill-green {
+    border-radius: 50px;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    -ms-border-radius: 50px;
+    -o-border-radius: 50px;
+  }
+  #section_1 .container-s1 {
+    width: 50%;
+    padding: 5em;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    text-align: left;
+  }
+  #section_1 .p-s1 {
+    color: #9e9aa7;
+    margin-top: -4em;
+    margin-bottom: 2em;
+  }
+  /*--------------------> 5. Section 2 <--------------------*/
+  #section_2 div {
+    background-image: url("/images/bg-shorten-desktop.svg");
+    background-size: 66%;
+    background-repeat: no-repeat;
+    background-position: right top;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    display: block;
+    padding: 1em;
+    width: 80%;
+    margin: 2em auto;
+    position: relative;
+  }
+  #section_2 div input {
+    display: block;
+    margin: 0 auto;
+    padding: 1em;
+    width: 90%;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+  #section_2 div .btn-pill-green {
+    display: block;
+    margin: 0.5em auto 0;
+    width: 90%;
+  }
+  /*--------------------> 6. Section 3 <--------------------*/
+  /*--------------------> 7. Section 4 <--------------------*/
+  #section_4 {
+    background-color: #3b3054;
+    background-image: url("/images/bg-boost-desktop.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: right top;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    padding: 5em 0;
+  }
+  /*--------------------> 8. Footer <--------------------*/
+}
+/*# sourceMappingURL=style.css.map */
