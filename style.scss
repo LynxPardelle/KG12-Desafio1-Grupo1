@@ -78,6 +78,7 @@ header {
   }
   #nav-cellphone {
     z-index: 10;
+  
     #menu-btn {
       width: 2.5em;
       height: 2.5em;
@@ -97,7 +98,7 @@ header {
       display: block;
       position: absolute;
       top: 0.5em;
-      right: 1em;
+      right: 1.5em;
       z-index: -1;
       width: 2.5em;
       height: 2.5em;
@@ -107,42 +108,43 @@ header {
       width: 100%;
       height: 50%;
       position: absolute;
-      top: 0;
+      top: 0.50em;
       left: 0;
       text-align: center;
-      font-size: 50px;
+      font-size: 25px;
+      color: $gay;
     }
-
+    
     #menu-icon span:first-of-type {
-      top: -25px;
+      top: 0em;
     }
-
+    
     #menu-icon span:nth-of-type(2) {
-      top: -12.5px;
+      top: 0.25em;
     }
-
+    
     #menu-btn:checked + #menu-icon span:first-of-type {
       transform: rotate(45deg);
-      top: -10px;
-      left: -5px;
+      top: 2px;
+      left: 2px;
     }
-
+    
     #menu-btn:checked + #menu-icon span:nth-of-type(2) {
       transform: rotate(-45deg);
-      top: 0px;
-      left: -5px;
+      top: 8px;
+      left: -8px;
     }
-
+    
     #menu-btn:checked + #menu-icon span:nth-of-type(3) {
       transform: rotate(45deg);
-      top: 0px;
-      left: 5px;
+      top: 8px;
+      left: 8px;
     }
-
+    
     #menu-btn:checked + #menu-icon span:last-of-type {
       transform: rotate(-45deg);
-      top: -10px;
-      left: 5px;
+      top: 2px;
+      left: -2px;
     }
 
     div {
@@ -186,7 +188,7 @@ header {
         -o-border-radius: 50px;
       }
     }
-  }
+  }  
 }
 
 /*--------------------> 4. Section 1 <--------------------*/
@@ -226,7 +228,7 @@ header {
     //display: flex;
     //flex-direction: column;
     background-color: $dark-violet;
-    background-image: url("/images/bg-shorten-mobile.svg");
+    background-image: url("images/bg-shorten-desktop.svg");
     background-size: 66%;
     background-repeat: no-repeat;
     background-position: right top;
@@ -281,7 +283,7 @@ header {
     color: $grayish-violet;
   }
 
-  div {
+  div:first-of-type {
     display: flex;
     direction: row;
     flex-wrap: wrap;
@@ -299,7 +301,7 @@ header {
     .container-s3 {
       display: block;
       background-color: white;
-      width: 90%;
+      width: 30%;
       margin: 2em auto;
 
       div {
@@ -320,7 +322,7 @@ header {
 /*--------------------> 7. Section 4 <--------------------*/
 #section_4 {
   background-color: $dark-violet;
-  background-image: url("/images/bg-boost-mobile.svg");
+  background-image: url("images/bg-boost-desktop.svg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: right top;
@@ -480,7 +482,7 @@ footer {
       background-repeat: no-repeat;
       background-position: right top;
       box-sizing: border-box;
-      display: block;
+      display: flex;
       padding: 1em;
       width: 80%;
       margin: 2em auto;
@@ -490,23 +492,82 @@ footer {
         display: block;
         margin: 0 auto;
         padding: 1em;
-        width: 90%;
-        box-sizing: border-box;
+        width: 70%;
+        height: 18.646px;
       }
 
       .btn-pill-green {
         display: block;
         margin: 0.5em auto 0;
-        width: 90%;
+        height: 60%;
+        width: 20%;
       }
     }
   }
 
   /*--------------------> 6. Section 3 <--------------------*/
+  #section_3 {
+  .text-s3 {
+    padding: 0.5em;
+    text-align: center;
+    margin: 0;
+  }
+  .p-s3 {
+    margin: 0;
+    padding: 1.5em;
+    text-align: center;
+    color: $grayish-violet;
+  }
+
+  div:first-of-type {
+    display: flex;
+    direction: column;
+    flex-wrap: wrap;
+    position: relative;
+    padding: 5em 0;
+
+    #anoying-line {
+      position: absolute;
+      width: 500px;
+      height: 10px;
+      background-color: $cyan;
+      top: calc(50% - 5px);
+      left: calc(50% - 250px);
+      z-index: -1;
+    }
+
+    .container-s3 {
+      display: block;
+      background-color: white;
+      width: 30%;
+      margin: 2em auto;
+
+      div {
+        background-color: $dark-violet;
+        border-radius: 100%;
+        width: 45px;
+        margin: calc(-22.5px - 0.75em) auto 0;
+        padding: 1.5em;
+
+        img {
+          width: 45px;
+        }
+      }
+    }
+
+    .container-s3:first-of-type {
+      align-self: flex-start;
+    }
+
+    .container-s3:last-of-type {
+      align-self: flex-end;
+    }
+  }
+}
   /*--------------------> 7. Section 4 <--------------------*/
   #section_4 {
     background-color: $dark-violet;
-    background-image: url("/images/bg-boost-desktop.svg");
+    background-image: url("images/bg-boost-desktop.svg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: right top;
@@ -514,4 +575,42 @@ footer {
     padding: 5em 0;
   }
   /*--------------------> 8. Footer <--------------------*/
+  footer {
+    background-color: $very-dark-violet;
+    padding: 2em;
+    text-align: center;
+    display: flex;
+    flex: row;
+    align-items: stretch;
+    justify-content: space-evenly;
+    position: relative;
+  
+    h2 {
+      font-size: 2em;
+    }
+  
+    h2, h3 {
+      color: white;
+      text-align: left;
+    }
+  
+    .container_foot {
+      padding: 1em;
+    }
+      nav {
+        ul {
+          padding: 0;
+          line-height: 20px;
+        }
+      }
+  
+    #icons_footer {
+      display: flex;
+      justify-content: space-around;
+      align-items: flex-start; 
+      padding: 5em;
+      width: 50px;
+      height:50px;
+    }
+  }
 }

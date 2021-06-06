@@ -101,7 +101,7 @@ header #nav-cellphone #menu-icon {
   display: block;
   position: absolute;
   top: 0.5em;
-  right: 1em;
+  right: 1.5em;
   z-index: -1;
   width: 2.5em;
   height: 2.5em;
@@ -111,46 +111,47 @@ header #nav-cellphone #menu-icon span {
   width: 100%;
   height: 50%;
   position: absolute;
-  top: 0;
+  top: 0.50em;
   left: 0;
   text-align: center;
-  font-size: 50px;
+  font-size: 25px;
+  color: #bfbfbf;
 }
 
 header #nav-cellphone #menu-icon span:first-of-type {
-  top: -25px;
+  top: 0em;
 }
 
 header #nav-cellphone #menu-icon span:nth-of-type(2) {
-  top: -12.5px;
+  top: 0.25em;
 }
 
 header #nav-cellphone #menu-btn:checked + #menu-icon span:first-of-type {
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
-  top: -10px;
-  left: -5px;
+  top: 2px;
+  left: 2px;
 }
 
 header #nav-cellphone #menu-btn:checked + #menu-icon span:nth-of-type(2) {
   -webkit-transform: rotate(-45deg);
           transform: rotate(-45deg);
-  top: 0px;
-  left: -5px;
+  top: 8px;
+  left: -8px;
 }
 
 header #nav-cellphone #menu-btn:checked + #menu-icon span:nth-of-type(3) {
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
-  top: 0px;
-  left: 5px;
+  top: 8px;
+  left: 8px;
 }
 
 header #nav-cellphone #menu-btn:checked + #menu-icon span:last-of-type {
   -webkit-transform: rotate(-45deg);
           transform: rotate(-45deg);
-  top: -10px;
-  left: 5px;
+  top: 2px;
+  left: -2px;
 }
 
 header #nav-cellphone div {
@@ -232,7 +233,7 @@ header #nav-cellphone div .btn-pill-green {
 /*--------------------> 5. Section 2 <--------------------*/
 #section_2 div {
   background-color: #3b3054;
-  background-image: url("/images/bg-shorten-mobile.svg");
+  background-image: url("images/bg-shorten-desktop.svg");
   background-size: 66%;
   background-repeat: no-repeat;
   background-position: right top;
@@ -289,7 +290,7 @@ header #nav-cellphone div .btn-pill-green {
   color: #9e9aa7;
 }
 
-#section_3 div {
+#section_3 div:first-of-type {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -299,7 +300,7 @@ header #nav-cellphone div .btn-pill-green {
   position: relative;
 }
 
-#section_3 div #anoying-line {
+#section_3 div:first-of-type #anoying-line {
   position: absolute;
   width: 10px;
   height: 500px;
@@ -308,14 +309,14 @@ header #nav-cellphone div .btn-pill-green {
   left: calc(50% - 5px);
 }
 
-#section_3 div .container-s3 {
+#section_3 div:first-of-type .container-s3 {
   display: block;
   background-color: white;
-  width: 90%;
+  width: 30%;
   margin: 2em auto;
 }
 
-#section_3 div .container-s3 div {
+#section_3 div:first-of-type .container-s3 div {
   background-color: #3b3054;
   border-radius: 100%;
   width: 45px;
@@ -323,14 +324,14 @@ header #nav-cellphone div .btn-pill-green {
   padding: 1.5em;
 }
 
-#section_3 div .container-s3 div img {
+#section_3 div:first-of-type .container-s3 div img {
   width: 45px;
 }
 
 /*--------------------> 7. Section 4 <--------------------*/
 #section_4 {
   background-color: #3b3054;
-  background-image: url("/images/bg-boost-mobile.svg");
+  background-image: url("images/bg-boost-desktop.svg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: right top;
@@ -496,13 +497,15 @@ footer #icons_footer {
   }
   /*--------------------> 5. Section 2 <--------------------*/
   #section_2 div {
-    background-image: url("/images/bg-shorten-desktop.svg");
+    background-image: url("images/bg-shorten-desktop.svg");
     background-size: 66%;
     background-repeat: no-repeat;
     background-position: right top;
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
-    display: block;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     padding: 1em;
     width: 80%;
     margin: 2em auto;
@@ -512,20 +515,72 @@ footer #icons_footer {
     display: block;
     margin: 0 auto;
     padding: 1em;
-    width: 90%;
-    -webkit-box-sizing: border-box;
-            box-sizing: border-box;
+    width: 70%;
   }
   #section_2 div .btn-pill-green {
     display: block;
     margin: 0.5em auto 0;
-    width: 90%;
+    width: 20%;
   }
   /*--------------------> 6. Section 3 <--------------------*/
+  #section_3 .text-s3 {
+    padding: 0.5em;
+    text-align: center;
+    margin: 0;
+  }
+  #section_3 .p-s3 {
+    margin: 0;
+    padding: 1.5em;
+    text-align: center;
+    color: #9e9aa7;
+  }
+  #section_3 div:first-of-type {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    direction: column;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    position: relative;
+    padding: 5em 0;
+  }
+  #section_3 div:first-of-type #anoying-line {
+    position: absolute;
+    width: 500px;
+    height: 10px;
+    background-color: #2acfcf;
+    top: calc(50% - 5px);
+    left: calc(50% - 250px);
+    z-index: -1;
+  }
+  #section_3 div:first-of-type .container-s3 {
+    display: block;
+    background-color: white;
+    width: 30%;
+    margin: 2em auto;
+  }
+  #section_3 div:first-of-type .container-s3 div {
+    background-color: #3b3054;
+    border-radius: 100%;
+    width: 45px;
+    margin: calc(-22.5px - 0.75em) auto 0;
+    padding: 1.5em;
+  }
+  #section_3 div:first-of-type .container-s3 div img {
+    width: 45px;
+  }
+  #section_3 div:first-of-type .container-s3:first-of-type {
+    -ms-flex-item-align: start;
+        align-self: flex-start;
+  }
+  #section_3 div:first-of-type .container-s3:last-of-type {
+    -ms-flex-item-align: end;
+        align-self: flex-end;
+  }
   /*--------------------> 7. Section 4 <--------------------*/
   #section_4 {
     background-color: #3b3054;
-    background-image: url("/images/bg-boost-desktop.svg");
+    background-image: url("images/bg-boost-desktop.svg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: right top;
@@ -534,5 +589,59 @@ footer #icons_footer {
     padding: 5em 0;
   }
   /*--------------------> 8. Footer <--------------------*/
+}
+
+footer {
+  background-color: #232127;
+  padding: 2em;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: row;
+      -ms-flex: row;
+          flex: row;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  position: relative;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+footer h2 {
+  font-size: 2em;
+  margin: auto 0;
+  padding: 50px;
+}
+
+footer h2,
+footer h3 {
+  color: white;
+}
+
+footer .container_foot {
+  padding: 1em;
+}
+
+footer .container_foot nav ul {
+  padding: 0;
+}
+
+footer #icons_footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  padding: 5em;
+  width: 50px;
+  height: 50px;
 }
 /*# sourceMappingURL=style.css.map */
