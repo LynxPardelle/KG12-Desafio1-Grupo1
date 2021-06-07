@@ -275,6 +275,7 @@ header #nav-cellphone div .btn-pill-green {
   justify-content: space-between;
   align-items: center;
   padding: 1em;
+  box-sizing: border-box;
 }
 #section_2 .links-shorted .a-black {
   color: black;
