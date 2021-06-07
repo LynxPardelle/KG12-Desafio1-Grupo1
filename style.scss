@@ -34,8 +34,8 @@ body {
   overflow-x: hidden;
   font-family: "Poppins", sans-serif;
   font-size: 18px;
-  box-sizing: border-box;
   background-color: lighten($color: $gray, $amount: 12.5);
+  box-sizing: border-box;
 }
 
 li {
@@ -47,14 +47,29 @@ a {
   color: $gray;
 }
 
+input {
+  outline: none 0 transparent;
+  outline-offset: 0;
+}
+
 button {
   border: none;
   padding: 1em 3em;
   font-weight: bold;
 }
 
+.btn-pill-dark-violet {
+  background-color: $dark-violet;
+  color: white;
+}
+
 .btn-pill-green {
   background-color: $cyan;
+  color: white;
+}
+
+.btn-pill-lighten-green {
+  background-color: lighten($color: $cyan, $amount: 25);
   color: white;
 }
 
@@ -78,7 +93,7 @@ header {
   }
   #nav-cellphone {
     z-index: 10;
-  
+
     #menu-btn {
       width: 2.5em;
       height: 2.5em;
@@ -108,39 +123,39 @@ header {
       width: 100%;
       height: 50%;
       position: absolute;
-      top: 0.50em;
+      top: 0.5em;
       left: 0;
       text-align: center;
       font-size: 25px;
-      color: $gay;
+      color: $gray;
     }
-    
+
     #menu-icon span:first-of-type {
       top: 0em;
     }
-    
+
     #menu-icon span:nth-of-type(2) {
       top: 0.25em;
     }
-    
+
     #menu-btn:checked + #menu-icon span:first-of-type {
       transform: rotate(45deg);
       top: 2px;
       left: 2px;
     }
-    
+
     #menu-btn:checked + #menu-icon span:nth-of-type(2) {
       transform: rotate(-45deg);
       top: 8px;
       left: -8px;
     }
-    
+
     #menu-btn:checked + #menu-icon span:nth-of-type(3) {
       transform: rotate(45deg);
       top: 8px;
       left: 8px;
     }
-    
+
     #menu-btn:checked + #menu-icon span:last-of-type {
       transform: rotate(-45deg);
       top: 2px;
@@ -188,7 +203,7 @@ header {
         -o-border-radius: 50px;
       }
     }
-  }  
+  }
 }
 
 /*--------------------> 4. Section 1 <--------------------*/
@@ -202,7 +217,9 @@ header {
   }
 
   img {
-    width: 150vw;
+    width: 140vw;
+    display: block;
+    margin: 0 auto 0 15px;
   }
   .btn-pill-green {
     border-radius: 50px;
@@ -222,98 +239,183 @@ header {
     color: $grayish-violet;
   }
 }
+
 /*--------------------> 5. Section 2 <--------------------*/
 #section_2 {
-  div {
-    //display: flex;
-    //flex-direction: column;
-    background-color: $dark-violet;
-    background-image: url("images/bg-shorten-desktop.svg");
-    background-size: 66%;
-    background-repeat: no-repeat;
-    background-position: right top;
-    box-sizing: border-box;
-    display: block;
-    padding: 1em;
+  #short-the-link {
+    background: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 50%, rgba(255, 255, 255, 0.4290091036414566) 50%, rgba(255, 255, 255, 0) 50%, rgba(0, 0, 0, 0) 100%);
+    padding: 2em 0;
+    margin: 0 0 -2em;
+
+    div {
+      //display: flex;
+      //flex-direction: column;
+      background-color: $dark-violet;
+      background-image: url("images/bg-shorten-desktop.svg");
+      background-size: 66%;
+      background-repeat: no-repeat;
+      background-position: right top;
+      box-sizing: border-box;
+      display: block;
+      padding: 1em;
+      width: 80%;
+      margin: 0 auto;
+      position: relative;
+      border-radius: 10px;
+      -webkit-border-radius: 10px;
+      -moz-border-radius: 10px;
+      -ms-border-radius: 10px;
+      -o-border-radius: 10px;
+
+      input {
+        display: block;
+        margin: 0 auto;
+        padding: 1em;
+        width: 90%;
+        box-sizing: border-box;
+        border-radius: 5px;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        -ms-border-radius: 5px;
+        -o-border-radius: 5px;
+      }
+
+      .btn-pill-green {
+        display: block;
+        margin: 0.5em auto 0;
+        width: 90%;
+        border-radius: 5px;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        -ms-border-radius: 5px;
+        -o-border-radius: 5px;
+      }
+    }
+  }
+
+  .links-shorted {
     width: 80%;
-    margin: 2em auto;
-    position: relative;
+    background-color: white;
+    margin: 1em auto;
     border-radius: 10px;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
     -ms-border-radius: 10px;
     -o-border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em;
 
-    input {
-      display: block;
-      margin: 0 auto;
-      padding: 1em;
-      width: 90%;
-      box-sizing: border-box;
-      border-radius: 5px;
-      -webkit-border-radius: 5px;
-      -moz-border-radius: 5px;
-      -ms-border-radius: 5px;
-      -o-border-radius: 5px;
+    .a-black {
+      color: black;
+      font-size: 0.9em;
+      width: 100%;
+      height: 1.8em;
+      overflow: hidden;
+      word-wrap: wrap;
+      text-align: center;
     }
 
-    .btn-pill-green {
+    hr {
       display: block;
-      margin: 0.5em auto 0;
-      width: 90%;
-      border-radius: 5px;
-      -webkit-border-radius: 5px;
-      -moz-border-radius: 5px;
-      -ms-border-radius: 5px;
-      -o-border-radius: 5px;
+      background-color: $gray;
+    }
+
+    .links-shorted-right {
+      width: 20em;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+
+      .a-cyan {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        a {
+          color: $cyan;
+          text-align: left;
+        }
+      }
+
+      .btn-pill-green,
+      .btn-pill-dark-violet,
+      .btn-pill-lighten-green {
+        margin: 0.75em auto;
+        padding: 0.75em 0;
+        width: 85%;
+        text-align: center;
+        border-radius: 5px;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        -ms-border-radius: 5px;
+        -o-border-radius: 5px;
+      }
     }
   }
 }
+
 /*--------------------> 6. Section 3 <--------------------*/
 #section_3 {
+  margin: 6em auto 3em;
+
   .text-s3 {
     padding: 0.5em;
     text-align: center;
     margin: 0;
   }
   .p-s3 {
-    margin: 0;
+    margin: 0 0 2em;
     padding: 1.5em;
     text-align: center;
     color: $grayish-violet;
   }
 
-  div:first-of-type {
+  #contain-of-containers-s3 {
     display: flex;
-    direction: row;
+    flex-direction: column;
     flex-wrap: wrap;
     position: relative;
 
     #anoying-line {
       position: absolute;
       width: 10px;
-      height: 500px;
+      height: 750px;
       background-color: $cyan;
-      top: calc(50% - 250px);
+      top: calc(50% - 375px);
       left: calc(50% - 5px);
     }
 
     .container-s3 {
       display: block;
       background-color: white;
-      width: 30%;
+      width: 90%;
       margin: 2em auto;
+      z-index: 5;
+      border-radius: 10px;
+      -webkit-border-radius: 10px;
+      -moz-border-radius: 10px;
+      -ms-border-radius: 10px;
+      -o-border-radius: 10px;
 
       div {
         background-color: $dark-violet;
         border-radius: 100%;
         width: 45px;
-        margin: calc(-22.5px - 0.75em) auto 0;
+        height: 45px;
+        margin: calc(-22.5px - 1.5em) auto 0;
         padding: 1.5em;
 
         img {
           width: 45px;
         }
+      }
+
+      p {
+        padding: 0 1.5em 2em;
+        text-align: center;
       }
     }
   }
@@ -348,12 +450,14 @@ header {
     -o-border-radius: 50px;
   }
 }
+
 /*--------------------> 8. Footer <--------------------*/
 footer {
   background-color: $very-dark-violet;
   padding: 2em;
   text-align: center;
-  display: block;
+  display: flex;
+  flex-direction: column;
 
   h2 {
     font-size: 2em;
@@ -379,13 +483,14 @@ footer {
     display: flex;
     justify-content: space-evenly;
     align-content: center;
-    padding: 1em;
+    padding: 1em 0;
+    box-sizing: border-box;
   }
 }
 
 /*--------------------> 9. Responsive <--------------------*/
-@media screen and (min-width: 900px) {
-  /*--------------------> 3. Header <--------------------*/
+@media screen and (min-width: 1000px) {
+  /*--------------------> 10. Responsive | Header <--------------------*/
   header {
     display: flex;
     justify-content: space-around;
@@ -430,7 +535,7 @@ footer {
       display: none;
     }
   }
-  /*--------------------> 4. Section 1 <--------------------*/
+  /*--------------------> 11. Responsive | Section 1 <--------------------*/
   #section_1 {
     background-color: white;
     display: flex;
@@ -472,99 +577,190 @@ footer {
     }
   }
 
-  /*--------------------> 5. Section 2 <--------------------*/
+  /*--------------------> 12. Responsive | Section 2 <--------------------*/
   #section_2 {
-    div {
-      //display: flex;
-      //flex-direction: column;
-      background-image: url("/images/bg-shorten-desktop.svg");
-      background-size: 66%;
-      background-repeat: no-repeat;
-      background-position: right top;
-      box-sizing: border-box;
-      display: flex;
-      padding: 1em;
-      width: 80%;
-      margin: 2em auto;
-      position: relative;
-
-      input {
-        display: block;
-        margin: 0 auto;
-        padding: 1em;
-        width: 70%;
-        height: 18.646px;
-      }
-
-      .btn-pill-green {
-        display: block;
-        margin: 0.5em auto 0;
-        height: 60%;
-        width: 20%;
-      }
-    }
-  }
-
-  /*--------------------> 6. Section 3 <--------------------*/
-  #section_3 {
-  .text-s3 {
-    padding: 0.5em;
-    text-align: center;
-    margin: 0;
-  }
-  .p-s3 {
-    margin: 0;
-    padding: 1.5em;
-    text-align: center;
-    color: $grayish-violet;
-  }
-
-  div:first-of-type {
-    display: flex;
-    direction: column;
-    flex-wrap: wrap;
-    position: relative;
-    padding: 5em 0;
-
-    #anoying-line {
-      position: absolute;
-      width: 500px;
-      height: 10px;
-      background-color: $cyan;
-      top: calc(50% - 5px);
-      left: calc(50% - 250px);
-      z-index: -1;
-    }
-
-    .container-s3 {
-      display: block;
-      background-color: white;
-      width: 30%;
-      margin: 2em auto;
+    #short-the-link {
+      margin: 0 0 -3.75em;
 
       div {
-        background-color: $dark-violet;
-        border-radius: 100%;
-        width: 45px;
-        margin: calc(-22.5px - 0.75em) auto 0;
-        padding: 1.5em;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        background-image: url("/images/bg-shorten-desktop.svg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: right top;
+        box-sizing: border-box;
+        display: flex;
+        padding: 1em;
+        width: 80%;
+        height: 100px;
+        margin: 2em auto;
+        position: relative;
 
-        img {
-          width: 45px;
+        input {
+          display: block;
+          margin: 0 auto;
+          padding: 1em;
+          width: 70%;
+          height: 75%;
+          box-sizing: border-box;
+        }
+
+        .btn-pill-green {
+          display: block;
+          margin: auto;
+          height: 75%;
+          width: 20%;
+          box-sizing: border-box;
         }
       }
     }
 
-    .container-s3:first-of-type {
-      align-self: flex-start;
-    }
+    .links-shorted {
+      width: 80%;
+      background-color: white;
+      margin: 1em auto;
+      border-radius: 10px;
+      -webkit-border-radius: 10px;
+      -moz-border-radius: 10px;
+      -ms-border-radius: 10px;
+      -o-border-radius: 10px;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1em;
 
-    .container-s3:last-of-type {
-      align-self: flex-end;
+      .a-black {
+        color: black;
+        text-align: left;
+      }
+
+      hr {
+        display: none;
+      }
+
+      .links-shorted-right {
+        width: 30em;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+
+        .a-cyan {
+          width: 14em;
+          display: flex;
+          justify-content: flex-end;
+          a {
+            color: $cyan;
+            text-align: left;
+          }
+        }
+
+        .btn-pill-green,
+        .btn-pill-dark-violet,
+        .btn-pill-lighten-green {
+          margin: 0;
+          padding: 0.75em 0;
+          width: 6em;
+          text-align: center;
+          border-radius: 5px;
+          -webkit-border-radius: 5px;
+          -moz-border-radius: 5px;
+          -ms-border-radius: 5px;
+          -o-border-radius: 5px;
+        }
+      }
     }
   }
-}
-  /*--------------------> 7. Section 4 <--------------------*/
+
+  /*--------------------> 13. Responsive | Section 3 <--------------------*/
+  #section_3 {
+    margin: 6em auto 0;
+
+    .text-s3 {
+      padding: 0.5em;
+      text-align: center;
+      margin: 0;
+    }
+
+    p:first-of-type {
+      width: 50%;
+      margin: 0 auto;
+      padding: 1.5em;
+      text-align: center;
+      color: $grayish-violet;
+    }
+
+    #contain-of-containers-s3 {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      position: relative;
+      height: calc(275px + 10em);
+      width: 90%;
+      margin: 3em auto;
+
+      #anoying-line {
+        position: absolute;
+        width: 750px;
+        height: 10px;
+        padding: 0;
+        background-color: $cyan;
+        top: calc(50% - 5px);
+        left: calc(50% - 375px);
+        z-index: -1;
+      }
+
+      .container-s3 {
+        display: block;
+        background-color: white;
+        width: 30%;
+        height: 275px;
+        margin: 2em auto;
+
+        h3 {
+          text-align: left;
+          padding-left: 1.5rem;
+        }
+
+        div {
+          background-color: $dark-violet;
+          border-radius: 100%;
+          width: 45px;
+          margin: calc(-22.5px - 1.5em) auto 0 calc(45px - 0.75em);
+          padding: 1.5em;
+
+          img {
+            width: 45px;
+          }
+        }
+
+        p {
+          width: 100%;
+          padding: 0 1.5em 1.5em;
+          text-align: left;
+          color: $grayish-violet;
+          box-sizing: border-box;
+        }
+      }
+
+      .container-s3:first-of-type {
+        align-self: flex-start;
+      }
+
+      .container-s3:nth-of-type(3) {
+        align-self: center;
+      }
+
+      .container-s3:last-of-type {
+        align-self: flex-end;
+      }
+    }
+  }
+
+  /*--------------------> 14. Responsive | Section 4 <--------------------*/
   #section_4 {
     background-color: $dark-violet;
     background-image: url("images/bg-boost-desktop.svg");
@@ -572,45 +768,58 @@ footer {
     background-repeat: no-repeat;
     background-position: right top;
     box-sizing: border-box;
-    padding: 5em 0;
+    padding: 3em 0;
   }
-  /*--------------------> 8. Footer <--------------------*/
+
+  /*--------------------> 15. Responsive | Footer <--------------------*/
   footer {
     background-color: $very-dark-violet;
     padding: 2em;
     text-align: center;
     display: flex;
-    flex: row;
-    align-items: stretch;
+    flex-direction: row;
     justify-content: space-evenly;
     position: relative;
-  
+    align-items: flex-start;
+
     h2 {
       font-size: 2em;
     }
-  
-    h2, h3 {
+
+    h2,
+    h3 {
+      margin: 0;
       color: white;
       text-align: left;
     }
-  
+
     .container_foot {
       padding: 1em;
     }
-      nav {
-        ul {
-          padding: 0;
-          line-height: 20px;
+    nav {
+      ul {
+        padding: 0;
+        line-height: 20px;
+        text-align: left;
+
+        li {
+          margin: 1em 0;
         }
       }
-  
+    }
+
     #icons_footer {
       display: flex;
-      justify-content: space-around;
-      align-items: flex-start; 
-      padding: 5em;
-      width: 50px;
-      height:50px;
+      justify-content: space-evenly;
+      align-items: flex-start;
+      width: 20%;
+      padding: 1em 0;
+      box-sizing: border-box;
+
+      img:nth-of-type(2) {
+        width: 24px;
+        height: 24px;
+      }
     }
   }
 }

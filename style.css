@@ -25,9 +25,8 @@ body {
   overflow-x: hidden;
   font-family: "Poppins", sans-serif;
   font-size: 18px;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
   background-color: #dfdfdf;
+  box-sizing: border-box;
 }
 
 li {
@@ -39,10 +38,20 @@ a {
   color: #bfbfbf;
 }
 
+input {
+  outline: none 0 transparent;
+  outline-offset: 0;
+}
+
 button {
   border: none;
   padding: 1em 3em;
   font-weight: bold;
+}
+
+.btn-pill-dark-violet {
+  background-color: #3b3054;
+  color: white;
 }
 
 .btn-pill-green {
@@ -50,53 +59,43 @@ button {
   color: white;
 }
 
-/*--------------------> 3. Header <--------------------*/
-header {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -ms-flex-line-pack: center;
-      align-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  height: 4em;
-  padding: 1.5em;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  background-color: white;
+.btn-pill-lighten-green {
+  background-color: #91e8e8;
+  color: white;
 }
 
+/*--------------------> 3. Header <--------------------*/
+header {
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  align-items: center;
+  height: 4em;
+  padding: 1.5em;
+  box-sizing: border-box;
+  background-color: white;
+}
 header h1 {
   font-size: 1.5em;
 }
-
 header #navbar-desktop {
   display: none;
 }
-
 header #nav-cellphone {
   z-index: 10;
 }
-
 header #nav-cellphone #menu-btn {
   width: 2.5em;
   height: 2.5em;
   z-index: 10 !important;
   opacity: 0.01;
 }
-
 header #nav-cellphone #menu-btn:not(:checked) ~ div {
   display: none;
 }
-
 header #nav-cellphone #menu-btn:checked ~ div {
   display: block;
 }
-
 header #nav-cellphone #menu-icon {
   display: block;
   position: absolute;
@@ -106,54 +105,42 @@ header #nav-cellphone #menu-icon {
   width: 2.5em;
   height: 2.5em;
 }
-
 header #nav-cellphone #menu-icon span {
   width: 100%;
   height: 50%;
   position: absolute;
-  top: 0.50em;
+  top: 0.5em;
   left: 0;
   text-align: center;
   font-size: 25px;
   color: #bfbfbf;
 }
-
 header #nav-cellphone #menu-icon span:first-of-type {
   top: 0em;
 }
-
 header #nav-cellphone #menu-icon span:nth-of-type(2) {
   top: 0.25em;
 }
-
 header #nav-cellphone #menu-btn:checked + #menu-icon span:first-of-type {
-  -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
+  transform: rotate(45deg);
   top: 2px;
   left: 2px;
 }
-
 header #nav-cellphone #menu-btn:checked + #menu-icon span:nth-of-type(2) {
-  -webkit-transform: rotate(-45deg);
-          transform: rotate(-45deg);
+  transform: rotate(-45deg);
   top: 8px;
   left: -8px;
 }
-
 header #nav-cellphone #menu-btn:checked + #menu-icon span:nth-of-type(3) {
-  -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
+  transform: rotate(45deg);
   top: 8px;
   left: 8px;
 }
-
 header #nav-cellphone #menu-btn:checked + #menu-icon span:last-of-type {
-  -webkit-transform: rotate(-45deg);
-          transform: rotate(-45deg);
+  transform: rotate(-45deg);
   top: 2px;
   left: -2px;
 }
-
 header #nav-cellphone div {
   position: absolute;
   width: 75%;
@@ -168,26 +155,21 @@ header #nav-cellphone div {
   -ms-border-radius: 15px;
   -o-border-radius: 15px;
   padding: 2em;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
-
 header #nav-cellphone div nav ul {
   padding: 0;
 }
-
 header #nav-cellphone div nav ul li {
   margin: 1.5em auto;
   list-style-type: none;
 }
-
 header #nav-cellphone div nav ul hr {
   display: block;
   width: 90%;
   margin: 0 auto;
   background: #9e9aa7;
 }
-
 header #nav-cellphone div .btn-pill-green {
   width: 80%;
   border-radius: 50px;
@@ -201,17 +183,16 @@ header #nav-cellphone div .btn-pill-green {
 #section_1 {
   background-color: white;
 }
-
 #section_1 h2 {
   font-size: 2.5em;
   font-weight: bold;
   line-height: 1em;
 }
-
 #section_1 img {
-  width: 150vw;
+  width: 140vw;
+  display: block;
+  margin: 0 auto 0 15px;
 }
-
 #section_1 .btn-pill-green {
   border-radius: 50px;
   -webkit-border-radius: 50px;
@@ -219,30 +200,32 @@ header #nav-cellphone div .btn-pill-green {
   -ms-border-radius: 50px;
   -o-border-radius: 50px;
 }
-
 #section_1 .container-s1 {
   padding: 1em;
   text-align: center;
   margin: 0;
 }
-
 #section_1 .p-s1 {
   color: #9e9aa7;
 }
 
 /*--------------------> 5. Section 2 <--------------------*/
-#section_2 div {
+#section_2 #short-the-link {
+  background: linear-gradient(180deg, white 0%, white 50%, rgba(255, 255, 255, 0.4290091036) 50%, rgba(255, 255, 255, 0) 50%, rgba(0, 0, 0, 0) 100%);
+  padding: 2em 0;
+  margin: 0 0 -2em;
+}
+#section_2 #short-the-link div {
   background-color: #3b3054;
   background-image: url("images/bg-shorten-desktop.svg");
   background-size: 66%;
   background-repeat: no-repeat;
   background-position: right top;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   display: block;
   padding: 1em;
   width: 80%;
-  margin: 2em auto;
+  margin: 0 auto;
   position: relative;
   border-radius: 10px;
   -webkit-border-radius: 10px;
@@ -250,22 +233,19 @@ header #nav-cellphone div .btn-pill-green {
   -ms-border-radius: 10px;
   -o-border-radius: 10px;
 }
-
-#section_2 div input {
+#section_2 #short-the-link div input {
   display: block;
   margin: 0 auto;
   padding: 1em;
   width: 90%;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   border-radius: 5px;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   -ms-border-radius: 5px;
   -o-border-radius: 5px;
 }
-
-#section_2 div .btn-pill-green {
+#section_2 #short-the-link div .btn-pill-green {
   display: block;
   margin: 0.5em auto 0;
   width: 90%;
@@ -275,57 +255,119 @@ header #nav-cellphone div .btn-pill-green {
   -ms-border-radius: 5px;
   -o-border-radius: 5px;
 }
+#section_2 .links-shorted {
+  width: 80%;
+  background-color: white;
+  margin: 1em auto;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1em;
+}
+#section_2 .links-shorted .a-black {
+  color: black;
+  font-size: 0.9em;
+  width: 100%;
+  height: 1.8em;
+  overflow: hidden;
+  word-wrap: wrap;
+  text-align: center;
+}
+#section_2 .links-shorted hr {
+  display: block;
+  background-color: #bfbfbf;
+}
+#section_2 .links-shorted .links-shorted-right {
+  width: 20em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+#section_2 .links-shorted .links-shorted-right .a-cyan {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+#section_2 .links-shorted .links-shorted-right .a-cyan a {
+  color: #2acfcf;
+  text-align: left;
+}
+#section_2 .links-shorted .links-shorted-right .btn-pill-green,
+#section_2 .links-shorted .links-shorted-right .btn-pill-dark-violet,
+#section_2 .links-shorted .links-shorted-right .btn-pill-lighten-green {
+  margin: 0.75em auto;
+  padding: 0.75em 0;
+  width: 85%;
+  text-align: center;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
 
 /*--------------------> 6. Section 3 <--------------------*/
+#section_3 {
+  margin: 6em auto 3em;
+}
 #section_3 .text-s3 {
   padding: 0.5em;
   text-align: center;
   margin: 0;
 }
-
 #section_3 .p-s3 {
-  margin: 0;
+  margin: 0 0 2em;
   padding: 1.5em;
   text-align: center;
   color: #9e9aa7;
 }
-
-#section_3 div:first-of-type {
-  display: -webkit-box;
-  display: -ms-flexbox;
+#section_3 #contain-of-containers-s3 {
   display: flex;
-  direction: row;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-direction: column;
+  flex-wrap: wrap;
   position: relative;
 }
-
-#section_3 div:first-of-type #anoying-line {
+#section_3 #contain-of-containers-s3 #anoying-line {
   position: absolute;
   width: 10px;
-  height: 500px;
+  height: 750px;
   background-color: #2acfcf;
-  top: calc(50% - 250px);
+  top: calc(50% - 375px);
   left: calc(50% - 5px);
 }
-
-#section_3 div:first-of-type .container-s3 {
+#section_3 #contain-of-containers-s3 .container-s3 {
   display: block;
   background-color: white;
-  width: 30%;
+  width: 90%;
   margin: 2em auto;
+  z-index: 5;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
 }
-
-#section_3 div:first-of-type .container-s3 div {
+#section_3 #contain-of-containers-s3 .container-s3 div {
   background-color: #3b3054;
   border-radius: 100%;
   width: 45px;
-  margin: calc(-22.5px - 0.75em) auto 0;
+  height: 45px;
+  margin: calc(-22.5px - 1.5em) auto 0;
   padding: 1.5em;
 }
-
-#section_3 div:first-of-type .container-s3 div img {
+#section_3 #contain-of-containers-s3 .container-s3 div img {
   width: 45px;
+}
+#section_3 #contain-of-containers-s3 .container-s3 p {
+  padding: 0 1.5em 2em;
+  text-align: center;
 }
 
 /*--------------------> 7. Section 4 <--------------------*/
@@ -335,22 +377,18 @@ header #nav-cellphone div .btn-pill-green {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: right top;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   padding: 5em 0;
 }
-
 #section_4 img {
   width: 100vw;
   margin: 0;
   padding: 0;
 }
-
 #section_4 h2 {
   color: white;
   text-align: center;
 }
-
 #section_4 .btn-pill-green {
   display: block;
   margin: 0.5em auto 0;
@@ -366,65 +404,47 @@ footer {
   background-color: #232127;
   padding: 2em;
   text-align: center;
-  display: block;
+  display: flex;
+  flex-direction: column;
 }
-
 footer h2 {
   font-size: 2em;
   margin: 0;
 }
-
 footer h2,
 footer h3 {
   color: white;
 }
-
 footer .container_foot {
   padding: 1em;
 }
-
 footer .container_foot nav ul {
   padding: 0;
 }
-
 footer #icons_footer {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
-  -ms-flex-line-pack: center;
-      align-content: center;
-  padding: 1em;
+  justify-content: space-evenly;
+  align-content: center;
+  padding: 1em 0;
+  box-sizing: border-box;
 }
 
 /*--------------------> 9. Responsive <--------------------*/
-@media screen and (min-width: 900px) {
-  /*--------------------> 3. Header <--------------------*/
+@media screen and (min-width: 1000px) {
+  /*--------------------> 10. Responsive | Header <--------------------*/
   header {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
+    justify-content: space-around;
     height: 6em;
   }
   header h1 {
     font-size: 2em;
   }
   header #navbar-desktop {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    -ms-flex-line-pack: center;
-        align-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    justify-content: space-between;
+    align-content: center;
+    align-items: center;
     width: 85%;
   }
   header #navbar-desktop nav ul li {
@@ -446,31 +466,21 @@ footer #icons_footer {
   header #nav-cellphone {
     display: none;
   }
-  /*--------------------> 4. Section 1 <--------------------*/
+
+  /*--------------------> 11. Responsive | Section 1 <--------------------*/
   #section_1 {
     background-color: white;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: reverse;
-        -ms-flex-direction: row-reverse;
-            flex-direction: row-reverse;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    flex-direction: row-reverse;
+    align-items: center;
   }
   #section_1 h2 {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
     font-size: 4em;
     font-weight: bold;
     text-align: left;
     margin: 0.2em auto 1.1em;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
+    justify-content: flex-start;
   }
   #section_1 img {
     width: 50%;
@@ -486,8 +496,7 @@ footer #icons_footer {
   #section_1 .container-s1 {
     width: 50%;
     padding: 5em;
-    -webkit-box-sizing: border-box;
-            box-sizing: border-box;
+    box-sizing: border-box;
     text-align: left;
   }
   #section_1 .p-s1 {
@@ -495,153 +504,221 @@ footer #icons_footer {
     margin-top: -4em;
     margin-bottom: 2em;
   }
-  /*--------------------> 5. Section 2 <--------------------*/
-  #section_2 div {
-    background-image: url("images/bg-shorten-desktop.svg");
-    background-size: 66%;
+
+  /*--------------------> 12. Responsive | Section 2 <--------------------*/
+  #section_2 #short-the-link {
+    margin: 0 0 -3.75em;
+  }
+  #section_2 #short-the-link div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-image: url("/images/bg-shorten-desktop.svg");
+    background-size: cover;
     background-repeat: no-repeat;
     background-position: right top;
-    -webkit-box-sizing: border-box;
-            box-sizing: border-box;
-    display: -webkit-box;
-    display: -ms-flexbox;
+    box-sizing: border-box;
     display: flex;
     padding: 1em;
     width: 80%;
+    height: 100px;
     margin: 2em auto;
     position: relative;
   }
-  #section_2 div input {
+  #section_2 #short-the-link div input {
     display: block;
     margin: 0 auto;
     padding: 1em;
     width: 70%;
+    height: 75%;
+    box-sizing: border-box;
   }
-  #section_2 div .btn-pill-green {
+  #section_2 #short-the-link div .btn-pill-green {
     display: block;
-    margin: 0.5em auto 0;
+    margin: auto;
+    height: 75%;
     width: 20%;
+    box-sizing: border-box;
   }
-  /*--------------------> 6. Section 3 <--------------------*/
+  #section_2 .links-shorted {
+    width: 80%;
+    background-color: white;
+    margin: 1em auto;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em;
+  }
+  #section_2 .links-shorted .a-black {
+    color: black;
+    text-align: left;
+  }
+  #section_2 .links-shorted hr {
+    display: none;
+  }
+  #section_2 .links-shorted .links-shorted-right {
+    width: 30em;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  #section_2 .links-shorted .links-shorted-right .a-cyan {
+    width: 14em;
+    display: flex;
+    justify-content: flex-end;
+  }
+  #section_2 .links-shorted .links-shorted-right .a-cyan a {
+    color: #2acfcf;
+    text-align: left;
+  }
+  #section_2 .links-shorted .links-shorted-right .btn-pill-green,
+#section_2 .links-shorted .links-shorted-right .btn-pill-dark-violet,
+#section_2 .links-shorted .links-shorted-right .btn-pill-lighten-green {
+    margin: 0;
+    padding: 0.75em 0;
+    width: 6em;
+    text-align: center;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+  }
+
+  /*--------------------> 13. Responsive | Section 3 <--------------------*/
+  #section_3 {
+    margin: 6em auto 0;
+  }
   #section_3 .text-s3 {
     padding: 0.5em;
     text-align: center;
     margin: 0;
   }
-  #section_3 .p-s3 {
-    margin: 0;
+  #section_3 p:first-of-type {
+    width: 50%;
+    margin: 0 auto;
     padding: 1.5em;
     text-align: center;
     color: #9e9aa7;
   }
-  #section_3 div:first-of-type {
-    display: -webkit-box;
-    display: -ms-flexbox;
+  #section_3 #contain-of-containers-s3 {
     display: flex;
-    direction: column;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
+    flex-direction: row;
+    flex-wrap: wrap;
     position: relative;
-    padding: 5em 0;
+    height: calc(275px + 10em);
+    width: 90%;
+    margin: 3em auto;
   }
-  #section_3 div:first-of-type #anoying-line {
+  #section_3 #contain-of-containers-s3 #anoying-line {
     position: absolute;
-    width: 500px;
+    width: 750px;
     height: 10px;
+    padding: 0;
     background-color: #2acfcf;
     top: calc(50% - 5px);
-    left: calc(50% - 250px);
+    left: calc(50% - 375px);
     z-index: -1;
   }
-  #section_3 div:first-of-type .container-s3 {
+  #section_3 #contain-of-containers-s3 .container-s3 {
     display: block;
     background-color: white;
     width: 30%;
+    height: 275px;
     margin: 2em auto;
   }
-  #section_3 div:first-of-type .container-s3 div {
+  #section_3 #contain-of-containers-s3 .container-s3 h3 {
+    text-align: left;
+    padding-left: 1.5rem;
+  }
+  #section_3 #contain-of-containers-s3 .container-s3 div {
     background-color: #3b3054;
     border-radius: 100%;
     width: 45px;
-    margin: calc(-22.5px - 0.75em) auto 0;
+    margin: calc(-22.5px - 1.5em) auto 0 calc(45px - 0.75em);
     padding: 1.5em;
   }
-  #section_3 div:first-of-type .container-s3 div img {
+  #section_3 #contain-of-containers-s3 .container-s3 div img {
     width: 45px;
   }
-  #section_3 div:first-of-type .container-s3:first-of-type {
-    -ms-flex-item-align: start;
-        align-self: flex-start;
+  #section_3 #contain-of-containers-s3 .container-s3 p {
+    width: 100%;
+    padding: 0 1.5em 1.5em;
+    text-align: left;
+    color: #9e9aa7;
+    box-sizing: border-box;
   }
-  #section_3 div:first-of-type .container-s3:last-of-type {
-    -ms-flex-item-align: end;
-        align-self: flex-end;
+  #section_3 #contain-of-containers-s3 .container-s3:first-of-type {
+    align-self: flex-start;
   }
-  /*--------------------> 7. Section 4 <--------------------*/
+  #section_3 #contain-of-containers-s3 .container-s3:nth-of-type(3) {
+    align-self: center;
+  }
+  #section_3 #contain-of-containers-s3 .container-s3:last-of-type {
+    align-self: flex-end;
+  }
+
+  /*--------------------> 14. Responsive | Section 4 <--------------------*/
   #section_4 {
     background-color: #3b3054;
     background-image: url("images/bg-boost-desktop.svg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: right top;
-    -webkit-box-sizing: border-box;
-            box-sizing: border-box;
-    padding: 5em 0;
+    box-sizing: border-box;
+    padding: 3em 0;
   }
-  /*--------------------> 8. Footer <--------------------*/
-}
 
-footer {
-  background-color: #232127;
-  padding: 2em;
-  text-align: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex: row;
-      -ms-flex: row;
-          flex: row;
-  -webkit-box-align: stretch;
-      -ms-flex-align: stretch;
-          align-items: stretch;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
-  position: relative;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-}
-
-footer h2 {
-  font-size: 2em;
-  margin: auto 0;
-  padding: 50px;
-}
-
-footer h2,
+  /*--------------------> 15. Responsive | Footer <--------------------*/
+  footer {
+    background-color: #232127;
+    padding: 2em;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    position: relative;
+    align-items: flex-start;
+  }
+  footer h2 {
+    font-size: 2em;
+  }
+  footer h2,
 footer h3 {
-  color: white;
+    margin: 0;
+    color: white;
+    text-align: left;
+  }
+  footer .container_foot {
+    padding: 1em;
+  }
+  footer nav ul {
+    padding: 0;
+    line-height: 20px;
+    text-align: left;
+  }
+  footer nav ul li {
+    margin: 1em 0;
+  }
+  footer #icons_footer {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    width: 20%;
+    padding: 1em 0;
+    box-sizing: border-box;
+  }
+  footer #icons_footer img:nth-of-type(2) {
+    width: 24px;
+    height: 24px;
+  }
 }
 
-footer .container_foot {
-  padding: 1em;
-}
-
-footer .container_foot nav ul {
-  padding: 0;
-}
-
-footer #icons_footer {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-  padding: 5em;
-  width: 50px;
-  height: 50px;
-}
 /*# sourceMappingURL=style.css.map */
